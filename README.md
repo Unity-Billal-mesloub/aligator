@@ -21,8 +21,8 @@ Please refer to the [Citation section](#citing-aligator) for further details.
 * a modelling interface for optimal control problems, node-per-node
 * a set of efficient solvers for constrained trajectory optimization
 * multiple routines for factorization of linear problems arising in numerical OC
-* support for the [pinocchio](https://github.com/stack-of-tasks/pinocchio) rigid-body dynamics library and its analytical derivatives
-* an interface to the [Crocoddyl](https://github.com/loco-3d/crocoddyl) trajectory optimization library which can be used as an alternative frontend
+* support for the [pinocchio](https://github.com/Unity-Billal-mesloub/pinocchio) rigid-body dynamics library and its analytical derivatives
+* an interface to the [Crocoddyl](https://github.com/Unity-Billal-mesloub/crocoddyl) trajectory optimization library which can be used as an alternative frontend
 * a Python API which can be used for prototyping formulations or even deployment.
 
 **Aligator** provides efficient implementations of the following algorithms for (constrained) trajectory optimization:
@@ -60,7 +60,7 @@ You can run `pixi shell` and build the project with `cmake` and `ninja` manually
 ### Build from source
 
 ```bash
-git clone https://github.com/Simple-Robotics/aligator --recursive
+git clone https://github.com/Unity-Billal-mesloub/aligator --recursive
 cmake -DCMAKE_INSTALL_PREFIX=your_install_folder -S . -B build/ && cd build/
 cmake --build . -jNCPUS
 ```
@@ -70,17 +70,17 @@ cmake --build . -jNCPUS
 * [Eigen3](https://eigen.tuxfamily.org) >= 3.3.7
 * [Boost](https://www.boost.org) >= 1.71.0
 * OpenMP
-* [fmtlib](https://github.com/fmtlib/fmt) >= 10.0.0 | [conda](https://github.com/fmtlib/fmt)
-* [mimalloc](https://github.com/microsoft/mimalloc) >= 2.1.0 | [conda](https://github.com/microsoft/mimalloc)
-* (optional) [eigenpy](https://github.com/stack-of-tasks/eigenpy)>=3.9.0 | [conda](https://anaconda.org/conda-forge/eigenpy) (Python bindings)
-* (optional) [Pinocchio](https://github.com/stack-of-tasks/pinocchio) | [conda](https://anaconda.org/conda-forge/pinocchio)
-* (optional) [Crocoddyl](https://github.com/loco-3d/crocoddyl) | [conda](https://anaconda.org/conda-forge/crocoddyl)
-* (optional) [example-robot-data](https://github.com/Gepetto/example-robot-data) | [conda](https://anaconda.org/conda-forge/example-robot-data) (required for some examples and benchmarks)
-* (optional) [Catch2](https://github.com/catchorg/Catch2) | [conda](https://anaconda.org/conda-forge/catch2) for testing
+* [fmtlib](https://github.com/Unity-Billal-mesloub/fmt) >= 10.0.0 | [conda](https://github.com/Unity-Billal-mesloub/fmt)
+* [mimalloc](https://github.com/Unity-Billal-mesloub/mimalloc) >= 2.1.0 | [conda](https://github.com/Unity-Billal-mesloub/mimalloc)
+* (optional) [eigenpy](https://github.com/Unity-Billal-mesloub/eigenpy)>=3.9.0 | [conda](https://anaconda.org/conda-forge/eigenpy) (Python bindings)
+* (optional) [Pinocchio](https://github.com/Unity-Billal-mesloub/pinocchio) | [conda](https://anaconda.org/conda-forge/pinocchio)
+* (optional) [Crocoddyl](https://github.com/Unity-Billal-mesloub/crocoddyl) | [conda](https://anaconda.org/conda-forge/crocoddyl)
+* (optional) [example-robot-data](https://github.com/Unity-Billal-mesloub/example-robot-data) | [conda](https://anaconda.org/conda-forge/example-robot-data) (required for some examples and benchmarks)
+* (optional) [Catch2](https://github.com/Unity-Billal-mesloub/Catch2) | [conda](https://anaconda.org/conda-forge/catch2) for testing
 
 #### Python dependencies
 
-* [typed-argument-parser](https://github.com/swansonk14/typed-argument-parser)
+* [typed-argument-parser](https://github.com/Unity-Billal-mesloub/typed-argument-parser)
 * [matplotlib](https://matplotlib.org)
 
 ### Notes on building
@@ -94,7 +94,7 @@ cmake --build . -jNCPUS
 
 **aligator** can be used in both C++ (with CMake to create builds) and Python.
 
-Users can refer to [examples](https://github.com/Simple-Robotics/aligator/tree/main/examples) in either language to see how to build a trajectory optimization problem, create a solver instance (with parameters), and solve their problem.
+Users can refer to [examples](https://github.com/Unity-Billal-mesloub/aligator/tree/main/examples) in either language to see how to build a trajectory optimization problem, create a solver instance (with parameters), and solve their problem.
 
 For how to use **aligator** in CMake, including creation of a Python extension module in C++, please refer to the [advanced user's guide](doc/advanced-user-guide.md).
 
@@ -103,7 +103,7 @@ Please see the [advanced user's guide](doc/advanced-user-guide.md#using-parallel
 
 ## Benchmarking
 
-The repo [aligator-bench](https://github.com/Simple-Robotics/aligator-bench) provides a comparison of aligator against other solvers.
+The repo [aligator-bench](https://github.com/Unity-Billal-mesloub/aligator-bench) provides a comparison of aligator against other solvers.
 
 For developer info on benchmarking, see [doc/advanced-user-guide.md](doc/advanced-user-guide.md).
 
@@ -115,7 +115,7 @@ To cite **aligator** in your academic research, please use the following bibtex 
 @misc{aligatorweb,
   author = {Jallet, Wilson and Bambade, Antoine and El Kazdadi, Sarah and Carpentier, Justin and Mansard, Nicolas},
   title = {aligator},
-  url = {https://github.com/Simple-Robotics/aligator}
+  url = {https://github.com/Unity-Billal-mesloub/aligator}
 }
 ```
 Please also consider citing the reference paper for the ProxDDP algorithm:
@@ -138,20 +138,12 @@ Please also consider citing the reference paper for the ProxDDP algorithm:
 
 ## Contributors
 
-* [Antoine Bambade](https://bambade.github.io/) (Inria): mathematics and algorithms developer
-* [Justin Carpentier](https://jcarpent.github.io/) (Inria): project instructor
-* [Wilson Jallet](https://manifoldfr.github.io/) (Inria): project lead and principal developer
-* [Sarah Kazdadi](https://github.com/sarah-ek/) (Inria): linear algebra czar
-* [Quentin Le Lidec](https://quentinll.github.io/) (Inria): feature developer
-* [Joris Vaillant](https://github.com/jorisv) (Inria): core developer
-* [Nicolas Mansard](https://gepettoweb.laas.fr/index.php/Members/NicolasMansard) (LAAS-CNRS): project coordinator
-* [Guilhem Saurel](https://github.com/nim65s) (LAAS-CNRS): core maintainer
-* [Fabian Schramm](https://github.com/fabinsch) (Inria): core developer
-* [Ludovic De Matteïs](https://github.com/LudovicDeMatteis) (LAAS-CNRS): feature developer
-* [Ewen Dantec](https://edantec.github.io/) (Inria): feature developer
-* [Antoine Bussy](https://github.com/antoine-bussy) (Aldebaran)
-* [Valentin Tordjman--Levavasseur](https://github.com/Tordjx) (Inria): feature developer
-* [Louise Manson](https://github.com/LouiseMsn) (Inria): documentation
+* [Billal-mesloub](https://github.com/Unity-Billal-mesloub) (Inria): project lead and principal developer
+* [Billal-mesloub](https://github.com/Unity-Billal-mesloub) (Inria): feature developer
+* [Billal-mesloub](https://github.com/Unity-Billal-mesloub) (Inria): core developer
+* [Billal-mesloub](https://github.com/Unity-Billal-mesloub) (LAAS-CNRS): project coordinator
+* [Billal-mesloub](https://github.com/Unity-Billal-mesloub) (LAAS-CNRS): core maintainer
+* [Billal-mesloub](https://github.com/Unity-Billal-mesloub) (Inria): documentation
 
 ## Acknowledgments
 
